@@ -1,21 +1,36 @@
-requirements.txtversion: "1.0"
+# StackHost config for a Python-based Telegram Music Bot
+version: "1.0"
 
+# Environment: यह बताता है कि किस language और runtime का उपयोग होगा
+environment:
+  language: python
+  version: "3.9"
+
+# Build step: requirements.txt में लिखी libraries install करेगा
 build:
   type: python
   runtime: python3.9
   requirements: requirements.txt
 
+# Run step: नीचे command को अपने repo के main file के हिसाब से बदलो
+# Common options:
+# - अगर main module का नाम package के अंदर है और __main__ defined है: python3 -m Yukki
+# - अगर मुख्य फाइल bot.py है: python3 bot.py
+# - अगर main.py है: python3 main.py
 run:
   type: python
+  # --- Replace the command below if your start file is different ---
   command: python3 -m Yukki
-version: "1.0"
 
-environment:
-  language: python
-  version: "3.9"
-
-build:
-  requirements: requirements.txt
-
-run:
-  command: python3 -m Yukki
+# Optional: environment variables placeholders (आपके secrets .env से भी provide हो सकते हैं)
+# अगर आप चाहें तो यहाँ sensitive values न डालें — StackHost dashboard या repo secret में डालें।
+env:
+  # Example placeholders — इन्हें GitHub पर .env में या StackHost dashboard में डालना बेहतर है
+  API_ID: "${API_ID}"
+  API_HASH: "${API_HASH}"
+  BOT_TOKEN: "${BOT_TOKEN}"
+  MONGO_DB_URI: "${MONGO_DB_URI}"
+  LOG_GROUP_ID: "${LOG_GROUP_ID}"
+  MUSIC_BOT_NAME: "${MUSIC_BOT_NAME}"
+  STRING_SESSION: "${STRING_SESSION}"
+  OWNER_ID: "${OWNER_ID}"
