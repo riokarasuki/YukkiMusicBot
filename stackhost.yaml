@@ -1,15 +1,13 @@
 version: "1.0"
 
 environment:
-  language: python
-  version: 3.9
-  variables:
-    TELEGRAM_BOT_TOKEN: "8457129439:AAHSDblhTHuD7YwAJe6HFH26Jjha6ToWWj4"
-    OWNER_ID: "7738104912"
-    ERROR_LOG_CHANNEL_ID: "-1003172864607"
+  language: "python"
+  version: "3.9"
 
 build:
-  requirements: requirements.txt
+  type: "python"
+  requirements: "requirements.txt"
 
 run:
-  command: python3 -m main
+  type: "python"
+  command: "python3 -m YukkiMusic"
