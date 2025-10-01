@@ -5,9 +5,7 @@ environment:
   version: "3.9"
 
 build:
-  type: "python"
   requirements: "requirements.txt"
 
 run:
-  type: "python"
-  command: "python3 -m YukkiMusic"
+  command: "bash start"
