@@ -1,8 +1,8 @@
 version: "1.0"
 
 environment:
-  Language: "python"
-  Version: "3.9"
+  language: "python"
+  version: "3.9"
 
 build:
   requirements: "requirements.txt"
