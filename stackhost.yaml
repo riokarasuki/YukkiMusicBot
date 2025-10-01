@@ -8,4 +8,4 @@ build:
   requirements: requirements.txt
 
 run:
-  command: bash start 
+  command: bash start
