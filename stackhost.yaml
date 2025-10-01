@@ -1,11 +1,3 @@
-version: "1.0"
-
 environment:
   Language: "python"
   Version: "3.9"
-
-build:
-  requirements: "requirements.txt"
-
-run:
-  command: "python3 -m main"
